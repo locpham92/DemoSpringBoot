@@ -8,5 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IProductService extends IGenerateService<Product> {
+    List<Product> findByNameContaining(String name);
+    List<Product> findByCategory_Id(Long id);
+
 
 }

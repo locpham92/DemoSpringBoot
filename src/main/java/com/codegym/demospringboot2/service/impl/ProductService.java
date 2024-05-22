@@ -27,15 +27,12 @@ public class ProductService implements IProductService {
         Product product = productRepository.findById(id).get();
         productRepository.save(product);
     }
-    public List<Product> findAllByPrice(int from, int to) {
-        return null;
-    }
     public List<Product> findByNameContaining(String name) {
-        return null;
+        return productRepository.findByNameContaining(name);
+    }
+    public List<Product> findByCategory_Id(Long id) {
+        return productRepository.findByCategory_Id(id);
     }
 
-    public Product findByIdCustom(Long id) {
-        return null;
-    }
 
 }

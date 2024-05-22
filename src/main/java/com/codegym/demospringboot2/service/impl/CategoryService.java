@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryService implements IGenerateService {
+public class CategoryService implements ICategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
     public List<Category> findAll() {

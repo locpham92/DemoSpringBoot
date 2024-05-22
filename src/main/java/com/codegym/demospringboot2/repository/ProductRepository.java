@@ -11,10 +11,6 @@ import java.util.Optional;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    List<Product> findAllByPrice(int from, int to);
-
     List<Product> findByNameContaining(String name);
-
-    @Query(value = "select * from product where id = :id", nativeQuery = true)
-    Optional<Product> findByIdCustom(@Param("id") Long id);
+    List<Product> findByCategory_Id(Long id);
 }
